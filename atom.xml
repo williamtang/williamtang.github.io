@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Wailim的个人博客</title>
   
-  
+  <subtitle>Study | Play | Think | Share</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wailimtang.com/"/>
