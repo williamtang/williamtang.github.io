@@ -91,16 +91,18 @@
 <ul>
 <li>宿主机：Synology NAS</li>
 <li>Fava docker：<a href="https://hub.docker.com/r/yegle/fava/" target="_blank" rel="noopener">yegle/fava</a></li>
-<li>外部访问方式：<a href="https://www.vediotalk.com/archives/505" target="_blank" rel="noopener">Frp内网穿透</a><br>确定了上面的这个方案组合之后，就依次启用各个服务并进行配置。</li>
+<li>外部访问方式：<a href="https://www.vediotalk.com/archives/505" target="_blank" rel="noopener">Frp内网穿透</a></li>
 </ul>
-<h2 id="在NAS上部署fava-docker"><a href="#在NAS上部署fava-docker" class="headerlink" title="在NAS上部署fava docker"></a>在NAS上部署fava docker</h2><h3 id="fava-docker镜像安装"><a href="#fava-docker镜像安装" class="headerlink" title="fava docker镜像安装"></a>fava docker镜像安装</h3><p>在nas里打开Docker直接在注册表中搜索fava，第一个就是yegle/fava，右键直接下载该镜像。<br><a href="https://gitee.com/williamtang/blog_gallery/raw/master/img/nas%20docker%20install.png" target="_blank" rel="noopener">nas docker安装</a></p>
+<p>确定了上面的这个方案组合之后，就依次启用各个服务并进行配置。</p>
+<h2 id="在NAS上部署fava-docker"><a href="#在NAS上部署fava-docker" class="headerlink" title="在NAS上部署fava docker"></a>在NAS上部署fava docker</h2><h3 id="fava-docker镜像安装"><a href="#fava-docker镜像安装" class="headerlink" title="fava docker镜像安装"></a>fava docker镜像安装</h3><p>在nas里打开Docker直接在注册表中搜索fava，第一个就是yegle/fava，右键直接下载该镜像。</p>
+<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/nas%20docker%20install.png" alt="nas docker安装"></p>
 <h3 id="fava配置"><a href="#fava配置" class="headerlink" title="fava配置"></a>fava配置</h3><p>fava的配置分为3个部分</p>
 <ul>
 <li>端口配置：yegle/fava的端口设置是自动分配的</li>
 <li><code>卷</code>地址配置：将NAS上存放Beancount文件的文件路径<code>homes/xxx/Sync/Beancount</code>，并指向容器的装载路径<code>/Beancount</code></li>
 <li>环境变量：<code>BEANCOUNT_FILE</code>设置为<code>/Beancount/main.bean</code></li>
 </ul>
-<p><a href="https://gitee.com/williamtang/blog_gallery/raw/master/img/fava%20docker配置.png" target="_blank" rel="noopener">yegle/fava配置</a></p>
+<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/fava%20docker%E9%85%8D%E7%BD%AE.png" alt="yegle/fava配置"></p>
 <p>完成上面的配置即可在局域网环境下浏览器中输入<code>192.168.xxx.xxx:port</code>来打开beancount账本浏览。<br>顺便说一句，利用NAS的同步功能，可以将上面的<code>homes/xxx/Sync/Beancount</code>与本地PC上的Beancount目录建立双向同步，保持两边账本数据一致。这样无论是在PC端访问fava账本还是外部通过fava docker访问账本效果是一样的。</p>
 <h2 id="Frp内网穿透实现外网访问"><a href="#Frp内网穿透实现外网访问" class="headerlink" title="Frp内网穿透实现外网访问"></a>Frp内网穿透实现外网访问</h2><p>与上面链接中给的教程稍有不同的是，我的Frp客户端是部署在软路由上的，不过大同小异。关于软路由我就不在这里赘述了，简单提一句是用的<strong>斐讯N1盒子</strong>刷的<a href="https://www.right.com.cn/forum/forum.php?mod=viewthread&tid=3160780&extra=page%3D1%26filter%3Dtypeid%26typeid%3D21" target="_blank" rel="noopener">Openwrt R20.5.20</a>固件，内置了Frp服务。</p>
 <p>Frp需要分别配置服务端和客户端。</p>
@@ -109,13 +111,13 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7777</span><br><span class="line">dashboard_port = 7750 # 配置Frp看板的端口</span><br><span class="line">token = xxxxxx</span><br><span class="line">dashboard_user = xxxx</span><br><span class="line">dashboard_pwd = xxxx</span><br><span class="line">vhost_http_port = 80</span><br><span class="line">vhost_https_port = 443</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动 FRP 服务端</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ./frps -c ./frps.ini</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><p>客户端由于Openwrt的固件集成了Frp服务，因此只需要在页面上填写相应的配置即可。</p>
-<p><a href="https://gitee.com/williamtang/blog_gallery/raw/master/img/frpc配置.png" target="_blank" rel="noopener">frpc配置</a></p>
+<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/frpc%E9%85%8D%E7%BD%AE.png" alt="frpc配置"></p>
 <h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>配置好Frp服务端和客户端之后需要为fava的Http服务<strong>提供一个域名映射到公网IP</strong>。我之前闲置的域名在这里派上用场了，只需要在Cloudflare上添加 域名A 记录解析到VPS公网IP上，并添加一个用于fava访问的二级域名A记录。</p>
 <p>创建好二级域名之后，在Frp客户端内添加一个fava服务，并配置好用户名和密码以提升访问安全。</p>
-<p><a href="https://gitee.com/williamtang/blog_gallery/raw/master/img/Frp协议参数配置.png" target="_blank" rel="noopener">fava二级域名配置</a></p>
+<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/Frp%E5%8D%8F%E8%AE%AE%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.png" alt="fava二级域名配置"></p>
 <p>完成上面的配置，此时就可以在外网环境下访问家中部署在NAS上的fava服务了。</p>
-<p><a href="https://gitee.com/williamtang/blog_gallery/raw/master/img/fava验证.jpg" target="_blank" rel="noopener">fava登陆</a></p>
-<p><a href="https://gitee.com/williamtang/blog_gallery/raw/master/img/4G_fava.jpg" target="_blank" rel="noopener">4G网络访问fava</a></p>
+<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/fava%E9%AA%8C%E8%AF%81.jpg" alt="fava登陆"></p>
+<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/4G_fava.jpg" alt="4G网络访问fava"></p>
 
       
     </div>
@@ -139,7 +141,7 @@
 
     <span class="post-tags">
       <i class="icon-tags"></i>
-        <a href="/tags/Frp-Beancount-Fava/">Frp,Beancount,Fava</a>
+        <a href="/tags/Frp/">Frp</a><a href="/tags/Beancount/">Beancount</a><a href="/tags/Fava/">Fava</a>
     </span>
     
 
