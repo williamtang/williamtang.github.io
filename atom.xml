@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wailimtang.com/"/>
-  <updated>2020-06-07T13:13:57.801Z</updated>
+  <updated>2020-06-07T13:28:44.948Z</updated>
   <id>https://wailimtang.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>frp_nas_fava</title>
-    <link href="https://wailimtang.com/2020/06/07/frp_nas_fava/"/>
-    <id>https://wailimtang.com/2020/06/07/frp_nas_fava/</id>
-    <published>2020-06-07T13:14:39.689Z</published>
-    <updated>2020-06-07T13:13:57.801Z</updated>
+    <title>利用Frp内网穿透访问Beancount账本</title>
+    <link href="https://wailimtang.com/2020/06/07/%E5%88%A9%E7%94%A8Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%AE%BF%E9%97%AEBeancount%E8%B4%A6%E6%9C%AC/"/>
+    <id>https://wailimtang.com/2020/06/07/%E5%88%A9%E7%94%A8Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%AE%BF%E9%97%AEBeancount%E8%B4%A6%E6%9C%AC/</id>
+    <published>2020-06-07T13:20:18.000Z</published>
+    <updated>2020-06-07T13:28:44.948Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,17 @@
       
         
         
-          &lt;h1 id=&quot;利用Frp内网穿透访问Beancount账本&quot;&gt;&lt;a href=&quot;#利用Frp内网穿透访问Beancount账本&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
     
+      <category term="网络 生活" scheme="https://wailimtang.com/categories/%E7%BD%91%E7%BB%9C-%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Frp Beancount Fava" scheme="https://wailimtang.com/tags/Frp-Beancount-Fava/"/>
     
   </entry>
   
