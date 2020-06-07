@@ -117,9 +117,8 @@
 <h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>配置好Frp服务端和客户端之后需要为fava的Http服务<strong>提供一个域名映射到公网IP</strong>。我之前闲置的域名在这里派上用场了，只需要在Cloudflare上添加 域名A 记录解析到VPS公网IP上，并添加一个用于fava访问的二级域名A记录。</p>
 <p>创建好二级域名之后，在Frp客户端内添加一个fava服务，并配置好用户名和密码以提升访问安全。</p>
 <p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/Frp%E5%8D%8F%E8%AE%AE%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE.png" alt="fava二级域名配置"></p>
-<p>完成上面的配置，此时就可以在外网环境下访问家中部署在NAS上的fava服务了。</p>
-<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/fava%E9%AA%8C%E8%AF%81.jpg" alt="fava登陆"></p>
-<p><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/4G_fava.jpg" alt="4G网络访问fava"></p>
+<p>完成上面的配置，此时就可以在外网环境下访问家中部署在NAS上的fava服务了，在浏览器中输入fava二级域名会弹出一个登陆窗口。<br><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/fava%E9%AA%8C%E8%AF%81.jpg" alt="fava登陆"></p>
+<p>在4G环境下验证访问fava成功<br><img src="https://gitee.com/williamtang/blog_gallery/raw/master/img/4G_fava.jpg" alt="4G网络访问fava"></p>
 
       
     </div>
