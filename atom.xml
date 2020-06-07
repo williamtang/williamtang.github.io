@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wailimtang.com/"/>
-  <updated>2020-05-27T15:42:24.037Z</updated>
+  <updated>2020-06-07T13:13:57.801Z</updated>
   <id>https://wailimtang.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>將進酒</title>
-    <link href="https://wailimtang.com/2020/05/24/Hello-Blog/"/>
-    <id>https://wailimtang.com/2020/05/24/Hello-Blog/</id>
-    <published>2020-05-23T16:29:32.000Z</published>
-    <updated>2020-05-27T15:42:24.037Z</updated>
+    <title>frp_nas_fava</title>
+    <link href="https://wailimtang.com/2020/06/07/frp_nas_fava/"/>
+    <id>https://wailimtang.com/2020/06/07/frp_nas_fava/</id>
+    <published>2020-06-07T13:14:39.689Z</published>
+    <updated>2020-06-07T13:13:57.801Z</updated>
     
     <summary type="html">
     
@@ -29,44 +29,13 @@
       
         
         
-          &lt;p&gt;君不見黃河之水天上來，奔流到海不復回。&lt;br&gt;君不見高堂明鏡悲白髮，朝如青絲暮成雪。&lt;br&gt;人生得意須盡歡，莫使金樽空對月。&lt;br&gt;天生我材必有用，千金散盡還復來。&lt;br&gt;烹羊宰牛且爲樂，會須一飲三百杯。&lt;br&gt;岑夫子，丹丘生。將進酒，杯莫停。&lt;br&gt;與君歌一曲，請君爲我側
+          &lt;h1 id=&quot;利用Frp内网穿透访问Beancount账本&quot;&gt;&lt;a href=&quot;#利用Frp内网穿透访问Beancount账本&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
     
-      <category term="唐诗" scheme="https://wailimtang.com/categories/%E5%94%90%E8%AF%97/"/>
-    
-    
-      <category term="李白" scheme="https://wailimtang.com/tags/%E6%9D%8E%E7%99%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wailimtang.com/2020/05/24/hello-world/"/>
-    <id>https://wailimtang.com/2020/05/24/hello-world/</id>
-    <published>2020-05-23T16:21:59.436Z</published>
-    <updated>2020-05-27T15:44:14.868Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Hexo" scheme="https://wailimtang.com/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://wailimtang.com/tags/Hexo/"/>
     
   </entry>
   
