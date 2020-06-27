@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wailimtang.com/"/>
-  <updated>2020-06-13T14:16:25.677Z</updated>
+  <updated>2020-06-27T08:44:31.393Z</updated>
   <id>https://wailimtang.com/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wi-Fi 6初体验——AX86U一周使用小结</title>
+    <link href="https://wailimtang.com/2020/06/27/ax86u-weekly-experience/"/>
+    <id>https://wailimtang.com/2020/06/27/ax86u-weekly-experience/</id>
+    <published>2020-06-27T07:35:51.000Z</published>
+    <updated>2020-06-27T08:44:31.393Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;家里用了几年的华硕RT-AX66U，一直表现还可以，直到618来临前几天突然挂掉了，无法连接Wi-Fi，也无法通过有线连接。通过控制变量法我排除了光猫侧、墙壁网口侧以及终端侧的问题，只能判定路由器出问题了（此处有一&lt;em&gt;伏笔&lt;/em&gt;）。于是开始
+        
+      
+    
+    </summary>
+    
+    
+      <category term="网络" scheme="https://wailimtang.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="AX86U" scheme="https://wailimtang.com/tags/AX86U/"/>
+    
+      <category term="Wi-Fi6" scheme="https://wailimtang.com/tags/Wi-Fi6/"/>
+    
+      <category term="Pi-hole" scheme="https://wailimtang.com/tags/Pi-hole/"/>
+    
+      <category term="Adguard Home" scheme="https://wailimtang.com/tags/Adguard-Home/"/>
+    
+      <category term="NAS" scheme="https://wailimtang.com/tags/NAS/"/>
+    
+  </entry>
   
   <entry>
     <title>利用Frp内网穿透访问Beancount账本</title>
