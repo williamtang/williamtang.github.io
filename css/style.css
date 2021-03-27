@@ -441,7 +441,9 @@ a {
 }
 body {
   background-color: #f7f7f7;
-  font-family: "Segoe UI", "Lucida Grande", Helvetica, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+  /*font-family: "Segoe UI", "Lucida Grande", Helvetica, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;*/
+  font-family: "Palatino", "方正屏显雅宋简体", -apple-system, BlinkMacSystemFont, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+  line-height: 150%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -473,7 +475,7 @@ header {
 header .site-branding {
   text-align: center;
   margin-bottom: 2rem;
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: "Noto Serif","PT Serif",思源宋体,sans-serif!important;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -520,6 +522,18 @@ header .site-navigation ul li a {
   line-height: 2rem;
   padding: 0 1rem;
 }
+
+/* 
+  add on 2021.03.27
+  update site navigation style
+*/
+header .site-navigation a:hover {
+  /*color: #006b89;*/
+  text-decoration: none;
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #f6e6ca calc(50% - 9px), #f6e6ca 100%);
+  background-position: 0 100%;
+}
+
 article {
   position: relative;
   padding: 8rem 0;
@@ -608,6 +622,28 @@ article .featured-media img {
   height: auto;
   margin: 1rem auto;
 }
+
+/* add on 2021.03.27
+   define link style in the article
+ */
+article .article-content a {
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #ffdb00 calc(50% - 9px), #ffdb00 100%);
+  padding: 2px 0 1px 0;
+  transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
+  background-size: 100% 220%;
+}
+
+article .article-content a:link {
+  color: #006b89;
+}
+
+article .article-content a:hover {
+  color: #006b89;
+  text-decoration: none;
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #ffdb00 calc(50% - 9px), #ffdb00 100%);
+  background-position: 0 100%;
+}
+
 article .article-footer .pull-left {
   float: left;
 }
